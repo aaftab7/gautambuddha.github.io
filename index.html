@@ -518,7 +518,7 @@
                     </div>
                     <div class="image-overlay">
                         <h5>BROWSE OUR CATEGORIES</h5>
-                        <div class="first-owl owl-carousel owl-theme">
+                        <div class="third-owl owl-carousel owl-theme">
                             <div class="item">
                                 <div class="feature">
                                     <img src="https://www.muskaninterior.com.np/files/groups/BS.JPG" alt="Avatar" class="image">
@@ -982,6 +982,43 @@
 
     <script>
         $('.first-owl').owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 10,
+            dots: false,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                300: {
+                    items: 2,
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                768: {
+                    items: 3,
+                    margin: 5,
+
+                },
+                1000: {
+                    items: 4,
+                    loop: true
+                },
+                1025: {
+                    items: 4,
+                    loop: true
+                }
+            }
+        })
+    </script>
+<script>
+        $('.third-owl').owlCarousel({
             items: 4,
             loop: true,
             margin: 10,
