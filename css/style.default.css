@@ -976,7 +976,7 @@ header.nav-holder.sticky {
     text-align: center;
     display: block;
     height: 200px;
-    width: 255px;
+    width: 100%;
 }
 
 .type-lb {
