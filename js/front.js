@@ -1,11 +1,11 @@
-$(function () {
+$(function() {
 
 
 
     // ------------------------------------------------------- //
     // Navbar Sticky
     // ------------------------------------------------------ //
-    $(window).on('scroll', function () {
+    $(window).on('scroll', function() {
         if ($(window).scrollTop() > ($('.top-bar').outerHeight())) {
             $('header.nav-holder.make-sticky').addClass('sticky');
             $('body').css('padding-top', '' + $('#navbar').outerHeight() + 'px');
@@ -14,13 +14,13 @@ $(function () {
             $('header.nav-holder.make-sticky').removeClass('sticky');
             $('body').css('padding-top', '0');
         }
-    }); 
+    });
 
     // ------------------------------------------------------- //
     // Multi-level dropdown
     // ------------------------------------------------------ //
 
-    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function (event) {
+    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -30,7 +30,7 @@ $(function () {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }
-        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
             $('.dropdown-submenu .show').removeClass("show");
         });
 
@@ -39,7 +39,7 @@ $(function () {
     // ------------------------------------------------------- //
     // Scroll To
     // ------------------------------------------------------ //
-    $('.scroll-to').on('click', function (e) {
+    $('.scroll-to').on('click', function(e) {
 
         e.preventDefault();
         var full_url = this.href;
@@ -71,14 +71,14 @@ $(function () {
     // Product Gallery Slider
     // ------------------------------------------------------ //
     function productDetailGallery() {
-        $('a.thumb').on('click', function (e) {
+        $('a.thumb').on('click', function(e) {
             e.preventDefault();
             source = $(this).attr('href');
             $('#mainImage').find('img').attr('src', source);
         });
 
         for (i = 0; i < 3; i++) {
-            setTimeout(function () {
+            setTimeout(function() {
                 $('a.thumb').eq(i).trigger('click');
             }, 300);
         }
@@ -160,10 +160,10 @@ $(function () {
     // ------------------------------------------------------- //
     // Adding fade effect to dropdowns
     // ------------------------------------------------------ //
-    $('.dropdown').on('show.bs.dropdown', function () {
+    $('.dropdown').on('show.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(100);
     });
-    $('.dropdown').on('hide.bs.dropdown', function () {
+    $('.dropdown').on('hide.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(100);
     });
 
@@ -212,7 +212,7 @@ $(function () {
     // ------------------------------------------------------- //
     // click on the box activates the radio
     // ------------------------------------------------------ //
-    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
+    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function(e) {
         var radio = $(this).find(':radio');
         radio.prop('checked', true);
     });
@@ -252,7 +252,7 @@ $(function () {
         alternateColour.attr("href", $.cookie("theme_csspath"));
     }
 
-    $("#colour").change(function () {
+    $("#colour").change(function() {
 
         if ($(this).val() !== '') {
 
@@ -274,7 +274,7 @@ $(function () {
         $('body').addClass($.cookie("theme_layout"));
     }
 
-    $("#layout").change(function () {
+    $("#layout").change(function() {
 
         if ($(this).val() !== '') {
 
